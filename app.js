@@ -7,7 +7,7 @@ let previousEightEMA = 0;
 let eightEMA;
 let difference;
 let ledger = [];
-let accountBalance = 1;
+let accountBalance = 1000;
 let inMarket = false;
 
 // RUNS EVERY 1 SECONDS:
