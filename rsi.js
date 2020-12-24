@@ -8,7 +8,7 @@ let currSumLoss = 0;
 
 // ADD 13 NUMBERS TO RESULT INITIALLY
 result[0] = parseInt((Math.random() * (101 - 0) + 0))
-for (i=0;i<13;i++){
+for (let i=0;i<13;i++){
   marketMarker();
 }
 
@@ -38,7 +38,7 @@ function initialAvgGainLoss(){
   let diff = [];
   let loss = [];
   let gain = [];
-  for (i=0; i<13; i++){
+  for (let i=0; i<13; i++){
     diff = result[i] - result[i+1];
      if (diff < 0){
       loss.push(Math.abs(diff));
@@ -46,11 +46,11 @@ function initialAvgGainLoss(){
       gain.push(diff);
     }
   }
-  for(j=0,len1 = gain.length; j < len1; j++){
+  for(let j=0,len1 = gain.length; j < len1; j++){
     prevSumGain += gain[j];
     prevSumGain /= 14;
   }
-  for(k=0,len2 = loss.length; k < len2; k++){
+  for(let k=0,len2 = loss.length; k < len2; k++){
     prevSumLoss += loss[k];
     prevSumLoss /= 14;
   }
@@ -64,8 +64,8 @@ function currentAvgGainLoss(){
   } else {
     currSumGain = diff;
   }
-  avgGain = (prevSumGain * 13 + currSumGain)/14;
-  avgLoss = (prevSumLoss * 13 + currSumLoss)/14;
+  let avgGain = (prevSumGain * 13 + currSumGain)/14;
+  let avgLoss = (prevSumLoss * 13 + currSumLoss)/14;
   rs = avgGain / avgLoss;
   prevSumGain = avgGain;
   prevSumLoss = avgLoss;
