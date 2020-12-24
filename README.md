@@ -1,6 +1,7 @@
 # A JavaScript Trading Bot
 - Basic beginnings of a trading bot, written in JavaScript, and run using Node.js.
-- Only initial very basic strategy present, which uses crossing 5 and 8 period moving averages.
+- Only initial very basic strategy present, which uses crossing 5 and 8 period moving averages.  This is contained within app.js.
+- I've begun developing the Relative Strength Index indicator, in the rsi.js file.  It is self-contained, and does not need app.js to function.
 - Values for the initial strategy are hard-coded in, and the functions are not particularly reuseable currently.
 - More strategies are to be added, along with the ability to self-select your preference.
 - All price data is self-generated, and not yet pulled from an API.
